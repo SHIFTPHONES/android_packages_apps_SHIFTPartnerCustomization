@@ -19,9 +19,15 @@
 
     <application android:label="@string/app_name">
 
-        <receiver android:name=".SHIFTPartnerCustomization">
+        <receiver android:name=".SHIFTPartnerCustomizationLauncher">
             <intent-filter>
-                <action android:name="com.android.launcher3.action.PARTNER_CUSTOMIZATION"/>
+                <action android:name="com.android.launcher3.action.PARTNER_CUSTOMIZATION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".SHIFTPartnerCustomizationSuw">
+            <intent-filter>
+                <action android:name="com.android.setupwizard.action.PARTNER_CUSTOMIZATION" />
             </intent-filter>
         </receiver>
 
