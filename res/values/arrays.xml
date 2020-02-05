@@ -16,9 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <array name="partner_wallpapers" translatable="false">
-        <item>shift_pattern</item>
+        <item>shift_explosion</item>
         <item>shift_lake</item>
-        <item>shift_stone</item>
+        <item>shift_pattern</item>
         <item>shift_wood</item>
     </array>
 </resources>
