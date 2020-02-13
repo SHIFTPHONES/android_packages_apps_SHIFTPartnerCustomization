@@ -2,12 +2,12 @@
 <!-- Copyright (C) 2017 Google Inc. All Rights Reserved. -->
 <favorites>
   <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
-  <!-- Dialer Messaging Calendar Contacts Camera -->
+  <!-- Dialer Messaging Settings Chrome Camera -->
   <favorite container="-101" screen="0" x="0" y="0" packageName="com.google.android.dialer" className="com.google.android.dialer.extensions.GoogleDialtactsActivity"/>
   <favorite container="-101" screen="1" x="1" y="0" packageName="com.google.android.apps.messaging" className="com.google.android.apps.messaging.ui.ConversationListActivity"/>
-  <favorite container="-101" screen="2" x="2" y="0" packageName="com.google.android.calendar" className="com.android.calendar.event.LaunchInfoActivity"/>
-  <favorite container="-101" screen="3" x="3" y="0" packageName="com.google.android.contacts" className="com.android.contacts.activities.PeopleActivity"/>
-  <favorite container="-101" screen="4" x="4" y="0" packageName="com.android.camera2" className="com.android.camera.CameraActivity"/>
+  <favorite container="-101" screen="2" x="2" y="0" packageName="com.android.settings" className="com.android.settings.Settings"/>
+  <favorite container="-101" screen="3" x="3" y="0" packageName="com.android.chrome" className="com.google.android.apps.chrome.Main"/>
+  <favorite container="-101" screen="4" x="4" y="0" packageName="com.shift.shutter" className="com.shift.shutter.CameraActivity"/>
   <!-- In Launcher3, workspaces extend infinitely to the right, incrementing from zero -->
   <!-- Google folder -->
   <!-- Google, Chrome, Gmail, Maps, YouTube, (Drive), (Music), (Movies), Duo, Photos -->
