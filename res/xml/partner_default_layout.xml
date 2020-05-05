@@ -8,6 +8,8 @@
   <favorite container="-101" screen="2" x="2" y="0" packageName="com.android.settings" className="com.android.settings.Settings"/>
   <favorite container="-101" screen="3" x="3" y="0" packageName="com.android.chrome" className="com.google.android.apps.chrome.Main"/>
   <favorite container="-101" screen="4" x="4" y="0" packageName="com.shift.shutter" className="com.shift.shutter.CameraActivity"/>
+  <favorite container="-101" screen="4" x="4" y="0" packageName="org.codeaurora.snapcam" className="com.android.camera.CameraLauncher"/>
+
   <!-- In Launcher3, workspaces extend infinitely to the right, incrementing from zero -->
   <!-- Google folder -->
   <!-- Google, Chrome, Gmail, Maps, YouTube, (Drive), (Music), (Movies), Duo, Photos -->
