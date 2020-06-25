@@ -10,6 +10,15 @@
   <favorite container="-101" screen="4" x="4" y="0" packageName="com.shift.shutter" className="com.shift.shutter.CameraActivity"/>
   <favorite container="-101" screen="4" x="4" y="0" packageName="org.codeaurora.snapcam" className="com.android.camera.CameraLauncher"/>
 
+  <appwidget
+    packageName="com.google.android.googlequicksearchbox"
+    className="com.google.android.googlequicksearchbox.SearchWidgetProvider"
+    screen="0"
+    x="0"
+    y="0"
+    spanX="5"
+    spanY="1" />
+
   <!-- In Launcher3, workspaces extend infinitely to the right, incrementing from zero -->
   <!-- Google folder -->
   <!-- Google Play, Chrome, Google, Gmail, Maps, YouTube, (Drive), (Music), (Movies), Duo, Photos -->
