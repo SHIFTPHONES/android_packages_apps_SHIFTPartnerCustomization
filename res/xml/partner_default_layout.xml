@@ -20,11 +20,11 @@
     spanY="1" />
 
   <!-- In Launcher3, workspaces extend infinitely to the right, incrementing from zero -->
+  <!-- Play Store -->
+  <favorite screen="0" x="1" y="4" packageName="com.android.vending" className="com.android.vending.AssetBrowserActivity"/>
   <!-- Google folder -->
-  <!-- Google Play, Chrome, Google, Gmail, Maps, YouTube, (Drive), (Music), (Movies), Duo, Photos -->
+  <!-- Google, Gmail, Maps, YouTube, (Drive), (Music), (Movies), Duo, Photos -->
   <folder title="@string/google_folder_title" screen="0" x="2" y="4">
-    <favorite packageName="com.android.vending" className="com.android.vending.AssetBrowserActivity"/>
-    <favorite packageName="com.android.chrome" className="com.google.android.apps.chrome.Main"/>
     <favorite packageName="com.google.android.apps.nbu.files" className="com.google.android.apps.nbu.files.home.HomeActivity"/>
     <favorite packageName="com.google.android.googlequicksearchbox" className="com.google.android.googlequicksearchbox.SearchActivity"/>
     <favorite packageName="com.google.android.gm" className="com.google.android.gm.ConversationListActivityGmail"/>
@@ -36,4 +36,6 @@
     <favorite packageName="com.google.android.apps.tachyon" className="com.google.android.apps.tachyon.MainActivity"/>
     <favorite packageName="com.google.android.apps.photos" className="com.google.android.apps.photos.home.HomeActivity"/>
   </folder>
+  <!-- Google Chrome -->
+  <favorite screen="0" x="3" y="4" packageName="com.android.chrome" className="com.google.android.apps.chrome.Main"/>
 </favorites>
