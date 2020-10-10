@@ -4,6 +4,7 @@
   <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
   <!-- Dialer Settings Music Gallery Camera -->
   <favorite container="-101" screen="0" x="0" y="0" packageName="com.google.android.dialer" className="com.google.android.dialer.extensions.GoogleDialtactsActivity"/>
+  <favorite container="-101" screen="0" x="0" y="0" packageName="com.android.dialer" className="com.android.dialer.main.impl.MainActivity"/>
   <favorite container="-101" screen="1" x="1" y="0" packageName="com.android.settings" className="com.android.settings.Settings"/>
   <favorite container="-101" screen="2" x="2" y="0" packageName="com.shiftos.eleven" className="org.lineageos.eleven.ui.activities.HomeActivity"/>
   <favorite container="-101" screen="3" x="3" y="0" packageName="com.android.gallery3d" className="com.android.gallery3d.app.GalleryActivity"/>
