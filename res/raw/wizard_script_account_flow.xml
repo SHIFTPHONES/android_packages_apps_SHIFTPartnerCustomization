@@ -82,7 +82,7 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update"
-        wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_rollback_auth_early_update_flow">
+        wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="google_services" />
     </WizardAction>
 
@@ -112,7 +112,7 @@
 
     <!-- Common set of customization steps [RECOMMENDED] -->
     <WizardAction id="personalization_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_common_personalization_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_common_personalization_flow">
         <result wizard:action="AFTER_PERSONALIZATION" />
     </WizardAction>
 
@@ -193,7 +193,7 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="work_rollback_auth_early_update"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_rollback_auth_early_update_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="load_work_account_intent" />
     </WizardAction>
 

@@ -144,7 +144,7 @@
 
     <!-- Network selection and packages update [REQUIRED, CUSTOMIZABLE] -->
     <WizardAction id="connect_and_update"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_connect_and_update_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_connect_and_update_flow">
         <result wizard:name="no_connection"
             wizard:resultCode="1"
             wizard:action="no_network_flow" />
@@ -153,7 +153,7 @@
 
     <!-- Zero touch provisioning (for enterprise) [RECOMMENDED] -->
     <WizardAction id="zero_touch"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_zero_touch_flow" >
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_zero_touch_flow" >
         <result wizard:name="dpm_user_complete"
             wizard:resultCode="111"
             wizard:action="post_dpm_user_flow" />
@@ -163,61 +163,32 @@
     </WizardAction>
 
 
-    <!-- Choose between restoring or set up as new device [RECOMMENDED, CUSTOMIZABLE] -->
-    <WizardAction id="flow_choice"
-        wizard:uri="intent:#Intent;action=com.android.setupwizard.FLOW_CHOICE;end">
-        <result wizard:name="skip"
-            wizard:resultCode="1"
-            wizard:action="setup_as_new_flow" />
-        <result wizard:name="demo_mode_flow"
-            wizard:resultCode="101"
-            wizard:action="exit" />
-        <result wizard:name="unified_restore_flow"
-            wizard:resultCode="102"
-            wizard:action="unified_restore_flow" />
-    </WizardAction>
-
-
-    <!-- Restore from an existing account or device [RECOMMENDED, CUSTOMIZABLE] -->
-    <WizardAction id="restore_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_restore_flow">
-        <result wizard:action="oem_post_setup" />
-    </WizardAction>
-
-
     <!-- Restore from an existing account or device [RECOMMENDED, CUSTOMIZABLE] -->
     <WizardAction id="unified_restore_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_unified_restore_flow">
-        <result wizard:action="oem_post_setup" />
-    </WizardAction>
-
-
-    <!-- Set up as a new device [REQUIRED, CUSTOMIZABLE] -->
-    <WizardAction id="setup_as_new_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_setup_as_new_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_unified_restore_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 
 
     <!-- Set up without a network connection [RECOMMENDED] -->
     <WizardAction id="no_network_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_no_network_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_no_network_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 
     <!-- Add personal account after work profile provisioning [REQUIRED] -->
     <WizardAction id="add_personal_account"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_add_personal_account_flow" />
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_add_personal_account_flow" />
 
     <!-- Flow to run after a user-led device policy managed setup. [RECOMMENDED] -->
     <WizardAction id="post_dpm_user_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_post_dpm_user_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_post_dpm_user_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 
     <!-- QR provision flow (for enterprise) [RECOMMENDED] -->
     <WizardAction id="qr_provision_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_qr_provision_flow" />
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_qr_provision_flow" />
 
 
     <!-- OEM completion [CUSTOMIZABLE] -->

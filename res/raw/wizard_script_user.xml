@@ -116,7 +116,7 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_rollback_auth_early_update_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="load_account_intent" />
     </WizardAction>
 
@@ -137,14 +137,14 @@
 
     <!-- Set up with an account [REQUIRED] -->
     <WizardAction id="account_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_user_account_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_user_account_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 
 
     <!-- Set up without an account [REQUIRED] -->
     <WizardAction id="no_account_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_user_no_account_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_user_no_account_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 

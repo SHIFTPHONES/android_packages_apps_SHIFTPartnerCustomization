@@ -24,7 +24,7 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_rollback_auth_early_update_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="load_personal_account" />
     </WizardAction>
 
@@ -43,7 +43,7 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update_for_google_services"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_rollback_auth_early_update_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="personal_account_dpm_google_services" />
     </WizardAction>
 

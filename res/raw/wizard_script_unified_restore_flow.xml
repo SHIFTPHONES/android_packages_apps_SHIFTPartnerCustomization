@@ -75,7 +75,7 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_rollback_auth_early_update_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="add_account_during_usb_transfer" />
     </WizardAction>
 
@@ -116,7 +116,7 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update_wifi"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_rollback_auth_early_update_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="add_account_for_wifi_transfer" />
     </WizardAction>
 
@@ -144,21 +144,21 @@
 
     <!-- Set up without restoring from old device [RECOMMENDED] -->
     <WizardAction id="setup_as_new_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_setup_as_new_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_setup_as_new_flow">
         <result wizard:action="END_OF_SCRIPT" />
     </WizardAction>
 
 
     <!-- Set up without an account [REQUIRED] -->
     <WizardAction id="no_account_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_new_device_no_account_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_new_device_no_account_flow">
         <result wizard:action="END_OF_SCRIPT" />
     </WizardAction>
 
 
     <!-- Set up using USB/WiFi D2D transfer [RECOMMENDED] -->
     <WizardAction id="d2d_restore_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_restore_with_usb_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_restore_with_usb_flow">
         <result wizard:action="END_OF_SCRIPT" />
     </WizardAction>
 
@@ -168,27 +168,27 @@
 
     <!-- Restore user data and apps from servers [REQUIRED] -->
     <WizardAction id="restore_with_account_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_restore_with_account_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_restore_with_account_flow">
         <result wizard:action="END_OF_SCRIPT" />
     </WizardAction>
 
 
     <!-- Restore user data and apps from another Android [RECOMMENDED] -->
     <WizardAction id="restore_with_device_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_restore_with_device_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_restore_with_device_flow">
         <result wizard:action="END_OF_SCRIPT" />
     </WizardAction>
 
 
     <!-- Restore user data and apps from an iOS device [RECOMMENDED] -->
     <WizardAction id="restore_with_ios_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_restore_with_ios_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_restore_with_ios_flow">
         <result wizard:action="END_OF_SCRIPT" />
     </WizardAction>
 
     <!-- Flow to run after a user-led device policy managed setup. [RECOMMENDED] -->
     <WizardAction id="post_dpm_user_flow"
-      wizard:script="android.resource://com.google.android.gmsintegration/raw/wizard_script_post_dpm_user_flow">
+      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_post_dpm_user_flow">
         <result wizard:action="END_OF_SCRIPT" />
     </WizardAction>
 
