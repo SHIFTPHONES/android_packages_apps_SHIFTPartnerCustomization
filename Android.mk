@@ -22,7 +22,7 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_USE_AAPT2 := true
 
-LOCAL_PACKAGE_NAME := SHIFTPartnerCustomization
+LOCAL_PACKAGE_NAME := SHIFT-PartnerCustomization
 
 # Override GMS sample integration packages
 LOCAL_OVERRIDES_PACKAGES := \
