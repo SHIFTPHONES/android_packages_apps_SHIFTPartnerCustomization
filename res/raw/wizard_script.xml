@@ -32,6 +32,9 @@
         <result wizard:name="dpm_user_complete"
             wizard:resultCode="111"
             wizard:action="check_user_unlock_dpm_user_complete" />
+        <result wizard:name="dpm_profile_complete"
+            wizard:resultCode="112"
+            wizard:action="check_user_unlock_dpm_user_complete" />
         <result wizard:name="check_user_unlock_work_setup_interrupted_qr_scan"
             wizard:resultCode="114"
             wizard:action="check_user_unlock_work_setup_interrupted_qr_scan" />
@@ -144,57 +147,91 @@
 
     <!-- Network selection and packages update [REQUIRED, CUSTOMIZABLE] -->
     <WizardAction id="connect_and_update"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_connect_and_update_flow">
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_connect_and_update_flow">
         <result wizard:name="no_connection"
             wizard:resultCode="1"
             wizard:action="no_network_flow" />
     </WizardAction>
 
-
-    <!-- Zero touch provisioning (for enterprise) [RECOMMENDED] -->
+    <!-- Zero touch provisioning (for enterprise). This feature depends on Android Checkin and Early update. Place this action after Android Checkin and Early update, but before restore. [REQUIRED]. -->
     <WizardAction id="zero_touch"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_zero_touch_flow" >
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_zero_touch_flow" >
         <result wizard:name="dpm_user_complete"
             wizard:resultCode="111"
             wizard:action="post_dpm_user_flow" />
-        <result wizard:name="add_personal_account"
+        <!-- The restore flow would be set to cloud for COPE devices if the result code returned the adding personal account. -->
+        <result wizard:name="add_personal_account_after_work_profile"
             wizard:resultCode="120"
-            wizard:action="add_personal_account" />
+            wizard:action="add_personal_account_after_work_profile" />
+        <result wizard:name="financed_device_provisioning_complete"
+            wizard:resultCode="121"
+            wizard:action="setup_as_new_flow" />
+        <result wizard:name="work_profile_setup"
+            wizard:resultCode="122"
+            wizard:action="work_profile_setup" />
+        <result wizard:name="device_owner_setup"
+            wizard:resultCode="123"
+            wizard:action="post_dpm_user_flow" />
+        <!-- GmsCore will handle ZeroTouch. Go to setup_as_new flow, it will handle ZeroTouch and FRP -->
+        <result wizard:name="gmscore_zero_touch"
+            wizard:resultCode="116"
+            wizard:action="setup_as_new_flow"/>
     </WizardAction>
 
 
     <!-- Restore from an existing account or device [RECOMMENDED, CUSTOMIZABLE] -->
     <WizardAction id="unified_restore_flow"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_unified_restore_flow">
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_unified_restore_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 
+    <WizardAction id="work_profile_setup"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_post_dpm_provision_finalization_flow">
+        <result wizard:action="transition_to_personal_profile_setup" />
+    </WizardAction>
 
     <!-- Set up without a network connection [RECOMMENDED] -->
     <WizardAction id="no_network_flow"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_no_network_flow">
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_no_network_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 
+    <WizardAction id="transition_to_personal_profile_setup"
+        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.TRANSITION_TO_PERSONAL_PROFILE_SETUP;end">
+        <result wizard:action="add_personal_account_after_work_profile" />
+    </WizardAction>
+
     <!-- Add personal account after work profile provisioning [REQUIRED] -->
-    <WizardAction id="add_personal_account"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_add_personal_account_flow" />
+    <WizardAction id="add_personal_account_after_work_profile"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_account_flow">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+
+    <!-- Setup as new [REQUIRED] -->
+    <WizardAction id="setup_as_new_flow" wizard:flow="SetupAsNewFlow"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_account_flow">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
 
     <!-- Flow to run after a user-led device policy managed setup. [RECOMMENDED] -->
     <WizardAction id="post_dpm_user_flow"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_post_dpm_user_flow">
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_post_dpm_user_flow">
         <result wizard:action="oem_post_setup" />
     </WizardAction>
 
     <!-- QR provision flow (for enterprise) [RECOMMENDED] -->
     <WizardAction id="qr_provision_flow"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_qr_provision_flow" />
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_qr_provision_flow" />
 
 
     <!-- OEM completion [CUSTOMIZABLE] -->
     <WizardAction id="oem_post_setup"
         wizard:uri="intent:#Intent;action=com.android.setupwizard.OEM_POST_SETUP;end" />
 
+    <!-- Enterprise provisioning finalization flow. Required only in init setup flow. [REQUIRED] -->
+    <WizardAction id="enterprise_finalization_flow"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_post_dpm_provision_finalization_flow">
+    </WizardAction>
 
     <!-- Google kid account setup. Must be the last setup action. [REQUIRED] -->
     <WizardAction id="kid_post_setup"
@@ -206,3 +243,4 @@
         wizard:uri="intent:#Intent;action=com.android.setupwizard.EXIT;end" />
 
 </WizardScript>
+

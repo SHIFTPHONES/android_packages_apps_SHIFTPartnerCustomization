@@ -74,35 +74,55 @@
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
       <result wizard:action="load_account_intent_frp" />
     </WizardAction>
 
     <!-- Scan QR code for device owner provisioning -->
     <WizardAction id="qr_code_scan"
         wizard:uri="intent:#Intent;action=com.android.setupwizard.QR_CODE_SCAN;end">
-        <result wizard:name="work_profile_add_personal_account"
+        <!-- The restore flow would be set to cloud for COPE devices if the result code returned the adding personal account. -->
+        <result wizard:name="add_personal_account_after_work_profile"
             wizard:resultCode="120"
-            wizard:action="add_personal_account" />
-        <result wizard:action="qr_account_added_check" />
+            wizard:action="qr_gms_checkin_pre_add_account" />
+        <result wizard:name="work_profile_setup"
+            wizard:resultCode="122"
+            wizard:action="work_profile_setup" />
+        <result wizard:name="device_owner_setup"
+            wizard:resultCode="123"
+            wizard:action="device_owner_setup" />
+        <result wizard:action="qr_gms_checkin" />
     </WizardAction>
 
-    <WizardAction id="add_personal_account"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_add_personal_account_flow" />
-
-    <!-- If no account has been added, show the Google Services screen. -->
-    <WizardAction id="qr_account_added_check"
-        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECK;end">
-        <result wizard:name="no_accounts_added"
-            wizard:resultCode="1"
-            wizard:action="google_services" />
-        <result wizard:name="account_added"
-            wizard:action="END_OF_SCRIPT" />
+    <WizardAction id="work_profile_setup"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_post_dpm_provision_finalization_flow">
+        <result wizard:action="transition_to_personal_profile_setup" />
     </WizardAction>
 
-    <!-- Show Google services opt-ins and Terms of Service [REQUIRED] -->
-    <WizardAction id="google_services"
-        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GOOGLE_SERVICES;end" />
+    <WizardAction id="device_owner_setup"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_post_dpm_provision_finalization_flow">
+        <result wizard:action="qr_gms_checkin" />
+    </WizardAction>
+
+    <WizardAction id="transition_to_personal_profile_setup"
+        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.TRANSITION_TO_PERSONAL_PROFILE_SETUP;end">
+        <result wizard:action="qr_gms_checkin_pre_add_account" />
+    </WizardAction>
+
+    <WizardAction id="qr_gms_checkin_pre_add_account"
+        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GMS_CHECKIN;end" />
+
+    <WizardAction id="add_personal_account_after_work_profile"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_account_flow">
+        <result wizard:action="END_OF_SCRIPT" />
+    </WizardAction>
+
+    <WizardAction id="qr_gms_checkin"
+        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GMS_CHECKIN;end" />
+
+    <!-- Flow to run after a user-led device policy managed setup. [RECOMMENDED] -->
+    <WizardAction id="post_dpm_user_flow"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_post_dpm_user_flow" />
 
     <WizardAction id="END_OF_SCRIPT" />
 </WizardScript>

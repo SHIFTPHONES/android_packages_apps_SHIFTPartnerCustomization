@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 SHIFT GmbH
+# Copyright (C) 2020-2022 SHIFT GmbH
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,22 +15,25 @@
 #
 
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)
-
-LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
-LOCAL_SRC_FILES := $(call all-java-files-under, src)
-
-LOCAL_USE_AAPT2 := true
-
 LOCAL_PACKAGE_NAME := SHIFT-PartnerCustomization
+LOCAL_MODULE_OWNER := shift
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := $(call all-java-files-under, src)
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_CERTIFICATE := platform
+LOCAL_SDK_VERSION := current
 
 # Override GMS sample integration packages
 LOCAL_OVERRIDES_PACKAGES := \
+    AndroidSGmsBetaOverlay \
     GmsSampleIntegration \
     GmsEEAType4cIntegration \
 
-LOCAL_AAPT_FLAGS := --auto-add-overlay
-
-LOCAL_SDK_VERSION := current
+# Override Lineage wallpapers
+LOCAL_OVERRIDES_PACKAGES += \
+    Backgrounds \
 
 include $(BUILD_PACKAGE)

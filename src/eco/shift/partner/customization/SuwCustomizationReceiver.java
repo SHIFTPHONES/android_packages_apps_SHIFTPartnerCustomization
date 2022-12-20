@@ -1,4 +1,4 @@
-package com.shiftos.partner.customization;
+package eco.shift.partner.customization;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
