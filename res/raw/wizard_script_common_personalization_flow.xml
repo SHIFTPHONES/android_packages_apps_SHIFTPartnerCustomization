@@ -13,7 +13,8 @@
     <WizardAction id="opa"
         wizard:uri="intent:#Intent;action=com.google.android.setupwizard.OPA_OPT_IN;B.valuePropSkippable=true;end" />
 
-    <!-- Set up payment method [RECOMMENDED] -->
+    <!-- Set up payment method. Ensure at least one of the wizard actions biometric or lock_screen
+         must precede the payments action [RECOMMENDED] -->
     <WizardAction id="payment"
         wizard:uri="intent:#Intent;action=com.google.android.setupwizard.PAYMENTS;end" />
 
