@@ -1,5 +1,5 @@
 <!--
-  Copyright (C) 2020 SHIFT GmbH
+  Copyright (C) 2020-2022 SHIFT GmbH
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,10 +15,5 @@
   -->
 <resources>
     <string name="app_name">SHIFT Partner Customization</string>
-
     <string name="google_folder_title">Google</string>
-
-    <string name="wizard_script_uri" translatable="false">android.resource://com.shiftos.partner.customization/raw/wizard_script</string>
-    <!-- URI for deferred setup wizard script, customizable by partners (do not translate) -->
-    <string name="wizard_script_deferred_uri" translatable="false">android.resource://com.shiftos.partner.customization/raw/wizard_script_deferred</string>
 </resources>
