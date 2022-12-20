@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <array
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:suw="http://schemas.android.com/apk/res-auto">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <action android:category="com.android.settings.suggested.category.EMAIL" />
 
@@ -12,8 +11,7 @@
     <action android:category="com.android.settings.suggested.category.PERSONALIZE"
             android:isRepeatable="true" />
 
-    <action android:category="com.android.settings.suggested.category.PAI"
-            suw:lifecycle="default" />
+    <action android:category="com.android.settings.suggested.category.PAI" />
 
     <action android:category="com.android.settings.suggested.category.LOCK_SCREEN_REDACTION" />
 

@@ -13,13 +13,16 @@
         wizard:uri="intent:#Intent;action=com.android.setupwizard.CHECK_USER_UNLOCK;end">
     </WizardAction>
 
+    <WizardAction id="gms_checkin"
+        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GMS_CHECKIN;end" />
+
     <!-- Factory Reset Protection (FRP) -->
     <WizardAction id="check_frp"
         wizard:uri="intent:#Intent;action=com.google.android.setupwizard.CHECK_FRP;end">
         <result wizard:name="load_account_intent_frp_to_resolve_frp"
             wizard:resultCode="101"
             wizard:action="load_account_intent_frp" />
-        <result wizard:action="google_services" />
+        <result wizard:action="account_added_check" />
     </WizardAction>
 
     <!-- Resolve the FRP challenge -->
@@ -31,13 +34,23 @@
         <result wizard:name="unintentional_cancel"
             wizard:resultCode="102"
             wizard:action="rollback_auth_early_update" />
-        <result wizard:action="google_services" />
+        <result wizard:action="account_added_check" />
     </WizardAction>
 
     <!-- Script that includes steps to rollback auth early update [REQUIRED] -->
     <WizardAction id="rollback_auth_early_update"
-      wizard:script="android.resource://com.shiftos.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_rollback_auth_early_update_flow">
         <result wizard:action="load_account_intent_frp" />
+    </WizardAction>
+
+    <!-- If no account has been added, show the Google Services screen. -->
+    <WizardAction id="account_added_check"
+        wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECK;end">
+        <result wizard:name="no_accounts_added"
+            wizard:resultCode="1"
+            wizard:action="google_services" />
+        <result wizard:name="account_added"
+            wizard:action="oem_post_setup" />
     </WizardAction>
 
     <!-- Show Google services opt-ins and Terms of Service [REQUIRED] -->
@@ -47,6 +60,11 @@
     <!-- OEM completion [CUSTOMIZABLE] -->
     <WizardAction id="oem_post_setup"
         wizard:uri="intent:#Intent;action=com.android.setupwizard.OEM_POST_SETUP;end">
+    </WizardAction>
+
+    <!-- Enterprise provisioning finalization flow. Required only in init setup flow. [REQUIRED] -->
+    <WizardAction id="enterprise_finalization_flow"
+        wizard:script="android.resource://eco.shift.partner.customization/raw/wizard_script_post_dpm_provision_finalization_flow">
     </WizardAction>
 
     <!-- Google kid account setup. Must be the last setup action. [REQUIRED] -->
