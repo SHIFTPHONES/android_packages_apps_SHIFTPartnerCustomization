@@ -9,6 +9,7 @@
   <favorite container="-101" screen="2" x="2" y="0" packageName="com.shiftos.eleven" className="org.lineageos.eleven.ui.activities.HomeActivity"/>
   <favorite container="-101" screen="2" x="2" y="0" packageName="org.lineageos.eleven" className="org.lineageos.eleven.ui.activities.HomeActivity"/>
   <favorite container="-101" screen="3" x="3" y="0" packageName="com.android.gallery3d" className="com.android.gallery3d.app.GalleryActivity"/>
+  <favorite container="-101" screen="4" x="4" y="0" packageName="org.lineageos.aperture" className="org.lineageos.aperture.CameraLauncher"/>
   <favorite container="-101" screen="4" x="4" y="0" packageName="com.android.camera2" className="com.android.camera.CameraActivity"/>
   <favorite container="-101" screen="4" x="4" y="0" packageName="com.shift.shutter" className="com.shift.shutter.CameraActivity"/>
   <favorite container="-101" screen="4" x="4" y="0" packageName="org.codeaurora.snapcam" className="com.android.camera.CameraLauncher"/>
