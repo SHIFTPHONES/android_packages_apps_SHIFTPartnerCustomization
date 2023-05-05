@@ -42,5 +42,10 @@
         <item>shift_wallpaper_29</item>
         <item>shift_wallpaper_30</item>
         <item>shift_wallpaper_32</item>
+        <!-- Legacy -->
+        <item>shift_explosion</item>
+        <item>shift_lake</item>
+        <item>shift_pattern</item>
+        <item>shift_wave</item>
     </array>
 </resources>
