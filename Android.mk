@@ -15,16 +15,18 @@
 #
 
 LOCAL_PATH := $(call my-dir)
-
 include $(CLEAR_VARS)
+
 LOCAL_PACKAGE_NAME := SHIFT-PartnerCustomization
 LOCAL_MODULE_OWNER := shift
 LOCAL_MODULE_TAGS := optional
+
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
+
+LOCAL_AAPT_FLAGS := --auto-add-overlay
+
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
-LOCAL_SYSTEM_EXT_MODULE := true
-LOCAL_CERTIFICATE := platform
-LOCAL_SDK_VERSION := current
+LOCAL_RESOURCE_DIR += $(LOCAL_PATH)/res_1080p
 
 # Override GMS sample integration packages
 LOCAL_OVERRIDES_PACKAGES := \
@@ -35,5 +37,9 @@ LOCAL_OVERRIDES_PACKAGES := \
 # Override Lineage wallpapers
 LOCAL_OVERRIDES_PACKAGES += \
     Backgrounds \
+
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_CERTIFICATE := platform
+LOCAL_SDK_VERSION := current
 
 include $(BUILD_PACKAGE)
