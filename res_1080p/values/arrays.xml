@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <array name="partner_wallpapers" translatable="false">
+        <item>shift_wallpaper_02</item>
+        <item>shift_wallpaper_03</item>
+        <item>shift_wallpaper_04</item>
+        <item>shift_wallpaper_06</item>
+        <item>shift_wallpaper_07</item>
+        <item>shift_wallpaper_08</item>
+        <item>shift_wallpaper_09</item>
+        <item>shift_wallpaper_10</item>
+        <item>shift_wallpaper_11</item>
+        <item>shift_wallpaper_12</item>
+        <item>shift_wallpaper_13</item>
+        <item>shift_wallpaper_14</item>
+        <item>shift_wallpaper_15</item>
+        <item>shift_wallpaper_16</item>
+        <item>shift_wallpaper_17</item>
+        <item>shift_wallpaper_18</item>
+        <item>shift_wallpaper_19</item>
+        <item>shift_wallpaper_20</item>
+        <item>shift_wallpaper_21</item>
+        <item>shift_wallpaper_23</item>
+        <item>shift_wallpaper_24</item>
+        <item>shift_wallpaper_25</item>
+        <item>shift_wallpaper_28</item>
+        <item>shift_wallpaper_29</item>
+        <item>shift_wallpaper_30</item>
+        <item>shift_wallpaper_32</item>
+    </array>
+</resources>
