@@ -22,7 +22,6 @@ android_app {
     srcs: ["src/**/*.java"],
 
     aaptflags: ["--auto-add-overlay"],
-    resource_dirs: ["res"] + ["res_1080p"],
 
     // Override GMS sample integration packages
     overrides: [
