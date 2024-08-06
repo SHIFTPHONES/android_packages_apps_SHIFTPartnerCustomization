@@ -17,15 +17,31 @@
 
 <resources>
     <string-array name="partner_wallpapers" translatable="false">
-        <item>wallpaper_01</item>
-        <item>wallpaper_02</item>
-        <item>wallpaper_03</item>
-        <item>wallpaper_04</item>
-        <item>wallpaper_05</item>
-        <item>wallpaper_06</item>
-        <item>wallpaper_07</item>
-        <item>wallpaper_08</item>
-        <item>wallpaper_09</item>
-        <item>wallpaper_10</item>
+        <item>shift_wallpaper_02</item>
+        <item>shift_wallpaper_03</item>
+        <item>shift_wallpaper_04</item>
+        <item>shift_wallpaper_06</item>
+        <item>shift_wallpaper_07</item>
+        <item>shift_wallpaper_08</item>
+        <item>shift_wallpaper_09</item>
+        <item>shift_wallpaper_10</item>
+        <item>shift_wallpaper_11</item>
+        <item>shift_wallpaper_12</item>
+        <item>shift_wallpaper_13</item>
+        <item>shift_wallpaper_14</item>
+        <item>shift_wallpaper_15</item>
+        <item>shift_wallpaper_16</item>
+        <item>shift_wallpaper_17</item>
+        <item>shift_wallpaper_18</item>
+        <item>shift_wallpaper_19</item>
+        <item>shift_wallpaper_20</item>
+        <item>shift_wallpaper_21</item>
+        <item>shift_wallpaper_23</item>
+        <item>shift_wallpaper_24</item>
+        <item>shift_wallpaper_25</item>
+        <item>shift_wallpaper_28</item>
+        <item>shift_wallpaper_29</item>
+        <item>shift_wallpaper_30</item>
+        <item>shift_wallpaper_32</item>
     </string-array>
 </resources>
