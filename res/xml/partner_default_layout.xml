@@ -29,7 +29,6 @@
   <!-- Google folder -->
   <!-- Google, Gmail, Maps, YouTube, (Drive), (Music), (Movies), Duo, Photos -->
   <folder title="@string/google_folder_title" screen="0" x="2" y="4">
-    <favorite packageName="com.google.android.apps.nbu.files" className="com.google.android.apps.nbu.files.home.HomeActivity"/>
     <favorite packageName="com.google.android.googlequicksearchbox" className="com.google.android.googlequicksearchbox.SearchActivity"/>
     <favorite packageName="com.google.android.gm" className="com.google.android.gm.ConversationListActivityGmail"/>
     <favorite packageName="com.google.android.apps.maps" className="com.google.android.maps.MapsActivity"/>
