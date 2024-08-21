@@ -16,6 +16,10 @@
 <resources>
     <string name="app_name">SHIFT Partner Customization</string>
     <string name="google_folder_title">Google</string>
+
+    <string name="shift_color_name_gray">SHIFT Gray</string>
+    <string name="shift_color_name_petrol">SHIFT Petrol</string>
+
     <string name="rainbow_color_name_red">Red</string>
     <string name="rainbow_color_name_orange">Orange</string>
     <string name="rainbow_color_name_yellow">Yellow</string>
@@ -25,6 +29,8 @@
     <string name="rainbow_color_name_magenta">Magenta</string>
     <string name="monochromatic_name">Monochromatic</string>
 
+    <string name="bundle_name_shift1" translatable="false">@string/shift_color_name_gray</string>
+    <string name="bundle_name_shift2" translatable="false">@string/shift_color_name_petrol</string>
     <string name="bundle_name_rainbow1" translatable="false">@string/rainbow_color_name_red</string>
     <string name="bundle_name_rainbow2" translatable="false">@string/rainbow_color_name_orange</string>
     <string name="bundle_name_rainbow3" translatable="false">@string/rainbow_color_name_yellow</string>
@@ -34,6 +40,8 @@
     <string name="bundle_name_rainbow7" translatable="false">@string/rainbow_color_name_magenta</string>
     <string name="bundle_name_monochromatic" translatable="false">@string/monochromatic_name</string>
 
+    <string name="color_style_shift1" translatable="false">SHIFT</string>
+    <string name="color_style_shift2" translatable="false">SHIFT</string>
     <string name="color_style_rainbow1" translatable="false">RAINBOW</string>
     <string name="color_style_rainbow2" translatable="false">RAINBOW</string>
     <string name="color_style_rainbow3" translatable="false">RAINBOW</string>
