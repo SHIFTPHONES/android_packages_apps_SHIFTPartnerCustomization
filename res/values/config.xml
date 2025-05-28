@@ -17,4 +17,6 @@
 
 <resources>
     <bool name="default_wallpapper_hidden">true</bool>
+
+    <bool name="is_corner_swipe_supported_to_trigger_default_assist_app">true</bool>
 </resources>
