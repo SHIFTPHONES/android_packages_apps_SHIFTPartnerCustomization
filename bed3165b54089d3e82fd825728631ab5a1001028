@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02b8a4af_02c19907",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-05-28T14:44:12Z",
+      "side": 1,
+      "message": "The test now says to enable 3 button navigation mode and invoke assistant by swiping from corners, while it is triggered with holding home.\n\nThis is impossible to pass, unless it is a mistake.\n\nSo i think it would be safer to disable gemini completely for now.",
+      "revId": "bed3165b54089d3e82fd825728631ab5a1001028",
+      "serverId": "5979fb85-960d-4ec4-8ce0-8568b21942fe"
+    }
+  ]
+}
