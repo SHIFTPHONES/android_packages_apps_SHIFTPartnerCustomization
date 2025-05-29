@@ -16,6 +16,24 @@
       "message": "Test: run gts-interactive -m GtsInteractiveGeminiTestCases -t com.google.android.geminiinteractive.gts.GeminiTest#outOfBox_LPPOrCornerSwipe3ButtonNavMode_showAssistApp",
       "revId": "cc72f35e78580e33ded0ecde0f18b82b73e0ad57",
       "serverId": "5979fb85-960d-4ec4-8ce0-8568b21942fe"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "895e34fe_851253d0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000049
+      },
+      "writtenOn": "2025-05-29T03:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "882f6f29_528274c0",
+      "revId": "cc72f35e78580e33ded0ecde0f18b82b73e0ad57",
+      "serverId": "5979fb85-960d-4ec4-8ce0-8568b21942fe"
     }
   ]
 }
